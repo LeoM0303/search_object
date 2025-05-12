@@ -28,9 +28,10 @@ def detect_object(model: YOLO, image_path:str) -> None:
 def main():
     model = YOLO('yolo11n.pt')
 
-    detect_object(model, 'IMAGES/img_1.png')
+    detect_object(model, 'IMAGES/img_3.png')
 
-    results = model.train(data="coco8.yaml", epochs=100, imgsz=640)
+    ## Train the model on the COCO8 example dataset for 100 epochs
+    #results = model.train(data="coco8.yaml", epochs=100, imgsz=640)
 
 if __name__ == '__main__':
     main()
