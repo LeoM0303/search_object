@@ -28,7 +28,7 @@ def detect_object(model: YOLO, image_path:str) -> None:
 def main():
     model = YOLO('yolov8n.pt')
 
-    detect_object(model, 'IMAGES/person.png')
+    detect_object(model, 'IMAGES/football.png')
 
 if __name__ == '__main__':
     main()
