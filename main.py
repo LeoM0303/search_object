@@ -26,9 +26,11 @@ def detect_object(model: YOLO, image_path:str) -> None:
         print(f'[+] Result of saving in file: {save_path}')
 #main part
 def main():
-    model = YOLO('yolov8n.pt')
+    model = YOLO('yolo11n.pt')
 
     detect_object(model, 'IMAGES/img_1.png')
+
+    results = model.train(data="coco8.yaml", epochs=100, imgsz=640)
 
 if __name__ == '__main__':
     main()
